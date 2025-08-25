@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import MapView from "./components/MapView";
+import Header from "./components/Header";
+import "./styles/main.scss";
+import Sidebar from "./components/Sidebar";
+import DronesMenu from "./components/DronesMenu";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const [isMapOpen, setIsMapOpen] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main">
+      <Header />
+
+      <div className="main_container">
+        <Sidebar isMapOpen={isMapOpen} setIsMapOpen={setIsMapOpen} />
+        <MapView />
+        {/* Animated Drawer */}
+        <AnimatePresence>
+          {isMapOpen && <DronesMenu onClose={() => setIsMapOpen(false)} />}
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

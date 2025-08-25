@@ -1,0 +1,86 @@
+.dronesContainer {
+  position: absolute;
+  width: 330px;
+  opacity: 1;
+  top: 79.07px;
+  left: 140px;
+  bottom: 7px;
+  background-color: #111111;
+
+  &-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // margin: 10px 20px;
+    // height: 120px;
+  }
+
+  &-seperator {
+    display: block;
+    width: 330px;
+    height: 1px;
+    background-color: #070707;
+  }
+
+  &_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 20px;
+
+    &-icon {
+      width: 21.9925537109375px;
+      height: 22.02039909362793px;
+      opacity: 1;
+      top: 104.1px;
+      left: 437.01px;
+
+      color: #777777;
+    }
+
+    h2 {
+      color: white;
+      text-transform: uppercase;
+      font-family: Inter;
+      font-size: 15px;
+    }
+  }
+
+  &_info {
+    margin: 20px;
+    margin-bottom: 0px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    h3 {
+      margin: 0px;
+      padding: 0px;
+      font-family: Inter;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 16px;
+      color: #65717c;
+      padding-bottom: 10px;
+    }
+    &-active {
+      color: #ffffff !important;
+      border-bottom: 5px solid #e74c3c;
+    }
+  }
+}
+
+.drones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px 20px;
+
+  h2 {
+    font-family: Inter;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    color: #ffffff;
+  }
+}

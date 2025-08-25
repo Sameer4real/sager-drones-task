@@ -1,0 +1,68 @@
+.header {
+  height: 72px;
+  background-color: #0b0b0b;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.logo {
+  width: 147.64202880859375px;
+  height: 25.227170944213867px;
+
+  opacity: 1;
+}
+
+.headerData {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  &_icons {
+    display: flex;
+    gap: 20px;
+
+    &_icon {
+      width: 25px;
+      height: 25.023170471191406px;
+
+      opacity: 1;
+      border-width: 0.6px;
+    }
+  }
+
+  &_info {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    h3 {
+      margin-top: 15px;
+      height: 17.01575469970703px;
+      font-family: Inter;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 14px;
+      color: #f9f9f9;
+    }
+    h4 {
+      margin-top: -10px;
+      height: 17.01575469970703px;
+      font-family: Inter;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 14px;
+
+      color: #748aa1;
+    }
+  }
+}
+
+.seperator {
+  width: 1px;
+  height: 49.045413970947266px;
+  background-color: #3c4248;
+}

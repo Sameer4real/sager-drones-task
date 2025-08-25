@@ -1,0 +1,17 @@
+body {
+  font-family: $font-stack;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  height: 100vh;
+
+  &_container {
+    flex: 1; /* take remaining height instead of fixed 100vh */
+    display: flex;
+    overflow: hidden;
+  }
+}
