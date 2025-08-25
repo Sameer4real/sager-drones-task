@@ -3,7 +3,10 @@ import { IoCloseCircle } from "react-icons/io5";
 import { motion } from "framer-motion";
 import Drones from "./Drones";
 
+import { useSelector } from "react-redux";
+
 const DronesMenu = ({ onClose }) => {
+  const drones = useSelector((state) => state.features);
   return (
     <motion.div
       className="dronesContainer"
@@ -28,7 +31,23 @@ const DronesMenu = ({ onClose }) => {
         <span className="dronesContainer-seperator"></span>
       </div>
 
-      <Drones />
+      {drones.map((drone, index) => {
+        const { pilot, organization, serial, registration } = drone.properties;
+        //   const [lng, lat] = drone.geometry.coordinates;
+
+        return (
+          <>
+            <Drones
+              key={index}
+              serial={serial}
+              pilot={pilot}
+              org={organization}
+              registration={registration}
+            />
+            <span className="dronesContainer-seperator"></span>
+          </>
+        );
+      })}
     </motion.div>
   );
 };

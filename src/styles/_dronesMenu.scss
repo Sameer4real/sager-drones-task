@@ -1,11 +1,33 @@
 .dronesContainer {
   position: absolute;
-  width: 330px;
+  width: 340px;
   opacity: 1;
   top: 79.07px;
   left: 140px;
   bottom: 7px;
   background-color: #111111;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 10px; /* width of vertical scrollbar */
+  }
+
+  /* Track (background of scrollbar) */
+  &::-webkit-scrollbar-track {
+    background: #1a1a1a; /* dark background */
+    border-radius: 10px;
+  }
+
+  /* Thumb (the moving part) */
+  &::-webkit-scrollbar-thumb {
+    background: #65717c;
+    border-radius: 10px;
+  }
+
+  /* Thumb on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #2a9fd6;
+  }
 
   &-main {
     display: flex;
@@ -76,11 +98,57 @@
   justify-content: center;
   margin: 10px 20px;
 
+  &-circle {
+    width: 19px;
+    height: 19.017608642578125px;
+    background-color: #f9000e;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    margin-top: -19px;
+    margin-left: 15px;
+  }
+
   h2 {
     font-family: Inter;
     font-weight: 700;
     font-style: Bold;
     font-size: 16px;
     color: #ffffff;
+  }
+
+  &-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &_info {
+    display: flex;
+    flex-wrap: wrap;
+    width: 240px;
+    /* 🔥 Allows items to go to a new line */
+
+    &-data {
+      width: 120px;
+      h4 {
+        margin: 0px;
+        padding: 0px;
+        font-family: Inter;
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 11px;
+        color: #cccccc;
+      }
+      h3 {
+        margin: 0px;
+        padding: 0px;
+        font-family: Inter;
+        font-weight: 700;
+        font-style: Bold;
+        font-size: 11px;
+        color: #cccccc;
+        text-transform: uppercase;
+      }
+    }
   }
 }
