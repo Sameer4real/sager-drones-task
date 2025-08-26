@@ -1,12 +1,16 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
-const Drones = ({ registration, serial, pilot, org }) => {
+const Drones = ({ registration, serial, pilot, org, name }) => {
   // Check if registration contains 'b' or 'B'
   const isB = registration.toLowerCase().includes("b");
+  const selectedDrone = useSelector((state) => state.selectedDrone);
 
   return (
-    <div className="drones">
-      <h2>DJI Mavic 3 Pro</h2>
+    <div
+      className={`drones ${selectedDrone === serial ? "selectedDrone" : ""}`}
+    >
+      <h2>{name}</h2>
       <div className="drones-content">
         <div className="drones_info">
           <div className="drones_info-data">

@@ -32,8 +32,8 @@ const DronesMenu = ({ onClose }) => {
       </div>
 
       {drones.map((drone, index) => {
-        const { pilot, organization, serial, registration } = drone.properties;
-        //   const [lng, lat] = drone.geometry.coordinates;
+        const { pilot, organization, serial, registration, Name } =
+          drone.properties;
 
         return (
           <>
@@ -43,6 +43,7 @@ const DronesMenu = ({ onClose }) => {
               pilot={pilot}
               org={organization}
               registration={registration}
+              name={Name}
             />
             <span className="dronesContainer-seperator"></span>
           </>

@@ -1,8 +1,9 @@
 // src/store/reducer.js
-import { ADD_DRONE } from "./actions";
+import { ADD_DRONE, SET_SELECTED_DRONE } from "./actions";
 
 const initialState = {
   features: [],
+  selectedDrone: "",
 };
 
 export const droneReducer = (state = initialState, action) => {
@@ -11,6 +12,11 @@ export const droneReducer = (state = initialState, action) => {
       return {
         ...state,
         features: [...state.features, action.payload], // ✅ always append
+      };
+    case SET_SELECTED_DRONE:
+      return {
+        ...state,
+        selectedDrone: action.payload,
       };
 
     default:
