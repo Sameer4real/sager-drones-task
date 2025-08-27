@@ -130,7 +130,7 @@ const MapView = ({ setIsMapOpen }) => {
         } else {
           const el = createDroneMarkerElement(yaw, registration);
 
-          // Click on marker → highlight drone in list
+          // Click on marker → highlight drone
           el.addEventListener("click", () => {
             dispatch(setSelectedDrone(serial));
             setIsMapOpen(true);
