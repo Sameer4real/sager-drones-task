@@ -167,7 +167,7 @@ const MapView = ({ setIsMapOpen }) => {
         data.features.forEach((f) => dispatch(addDrone(f)));
       }
     };
-  }, [dispatch, updateMarkers]);
+  }, [WS_URL, dispatch, updateMarkers]);
 
   useEffect(() => {
     if (mapRef.current) {
