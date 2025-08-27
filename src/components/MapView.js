@@ -15,7 +15,7 @@ const MapView = ({ setIsMapOpen }) => {
   const dronePositionsRef = useRef({});
 
   const [isMapLoading, setIsMapLoading] = useState(true);
-  const WS_URL = "ws://localhost:9013";
+  const WS_URL = process.env.REACT_APP_WS_URL || "ws://localhost:9013";
 
   // Initialize MapLibre map
   useEffect(() => {
