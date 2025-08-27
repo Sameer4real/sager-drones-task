@@ -1,0 +1,42 @@
+.flyingDrones {
+  width: 140px;
+  height: 40px;
+  background-color: rgba(217, 217, 217, 1);
+  opacity: 1;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  z-index: 9999;
+  padding: 0px 10px;
+
+  &-counter {
+    width: 27px;
+    height: 27.025022506713867px;
+    opacity: 1;
+    border-radius: 50%;
+    background-color: rgba(31, 35, 39, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      font-family: Inter;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+  p {
+    font-family: Inter;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    color: rgba(60, 66, 72, 1);
+  }
+}

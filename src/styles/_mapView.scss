@@ -31,22 +31,22 @@
 }
 
 .status-indicator.connected {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
 }
 
 .status-indicator.connecting {
-  background-color: #FF9800;
+  background-color: #ff9800;
   animation: pulse 1.5s infinite;
 }
 
 .status-indicator.error {
-  background-color: #F44336;
+  background-color: #f44336;
   box-shadow: 0 0 8px rgba(244, 67, 54, 0.5);
 }
 
 .status-indicator.disconnected {
-  background-color: #9E9E9E;
+  background-color: #9e9e9e;
 }
 
 .error-display {
@@ -67,7 +67,7 @@
 .drone-marker {
   width: 32px;
   height: 32px;
-  background-image: url('https://cdn-icons-png.flaticon.com/512/854/854878.png');
+  background-image: url("https://cdn-icons-png.flaticon.com/512/854/854878.png");
   background-size: cover;
   cursor: pointer;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
@@ -85,7 +85,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   padding: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   max-width: 300px;
 }
 
@@ -102,32 +102,49 @@
 }
 
 .drone-info {
-  display: grid;
-  gap: 4px;
-  font-size: 14px;
-  line-height: 1.4;
+  width: 170px;
+  height: 81.08433532714844px;
+  opacity: 1;
+  top: 391.36px;
+  left: 936px;
+  background-color: rgba(17, 17, 17, 1);
+
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 20px;
+  }
 }
 
 .drone-info h3 {
-  margin: 0 0 8px 0;
-  color: #333;
+  font-family: Inter;
+  font-weight: 700;
+  font-style: Bold;
   font-size: 16px;
-  font-weight: 600;
+  color: #eee;
 }
 
 .drone-info .info-row {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
 }
 
 .drone-info .info-label {
-  font-weight: 500;
-  color: #555;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 12px;
+  color: rgba(204, 204, 204, 1);
 }
 
 .drone-info .info-value {
-  color: #333;
+  font-family: Inter;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 1);
 }
 
 .last-updated {
@@ -139,16 +156,16 @@
 }
 
 @keyframes pulse {
-  0% { 
-    opacity: 1; 
+  0% {
+    opacity: 1;
     transform: scale(1);
   }
-  50% { 
-    opacity: 0.5; 
+  50% {
+    opacity: 0.5;
     transform: scale(1.1);
   }
-  100% { 
-    opacity: 1; 
+  100% {
+    opacity: 1;
     transform: scale(1);
   }
 }
@@ -189,14 +206,32 @@
     font-size: 12px;
     padding: 6px 10px;
   }
-  
+
   .drone-marker {
     width: 28px;
     height: 28px;
   }
-  
+
   .drone-popup .maplibregl-popup-content {
     max-width: 250px;
     padding: 12px;
   }
+}
+
+.maplibregl-popup-content {
+  background: rgba(17, 17, 17, 1) !important;
+  color: white;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+.maplibregl-popup-tip {
+  border-top-color: rgba(17, 17, 17, 1) !important;
+}
+
+.drone-item.active {
+  background-color: rgba(36, 255, 0, 0.3);
+  border-left: 3px solid green;
 }

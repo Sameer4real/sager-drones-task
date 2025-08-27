@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import "./styles/main.scss";
 import Sidebar from "./components/Sidebar";
 import DronesMenu from "./components/DronesMenu";
+import FlyingDrones from "./components/FlyingDrones";
 import { AnimatePresence } from "framer-motion";
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
 
       <div className="main_container">
         <Sidebar isMapOpen={isMapOpen} setIsMapOpen={setIsMapOpen} />
-        <MapView />
+        <FlyingDrones />
+        <MapView setIsMapOpen={setIsMapOpen} />
         {/* Animated Drawer */}
         <AnimatePresence>
           {isMapOpen && <DronesMenu onClose={() => setIsMapOpen(false)} />}

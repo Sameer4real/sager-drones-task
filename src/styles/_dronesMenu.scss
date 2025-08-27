@@ -154,5 +154,8 @@
 }
 
 .selectedDrone {
-  background-color: #e74c3c;
+  background-color: rgba(39, 39, 39, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
